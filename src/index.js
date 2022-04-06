@@ -1,5 +1,31 @@
-(async () => {
-  const planet = require('./models/planet');
+const express = require('express');
+const routes = require('./routes');
+
+const app = express();
+
+app.use(express.json());
+app.use(routes);
+
+app.listen(3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// (async () => {
+//   const planet = require('../models/planet');
   
   
   // -- create
@@ -24,10 +50,12 @@
   //   await updatePlanets.save();
 
   // -- delete
-  const deletePlanets = await planet.findByPk(1);
-  console.log(deletePlanets);
-  await deletePlanets.destroy();
+  // const deletePlanets = await planet.findByPk(1);
+  // console.log(deletePlanets);
+  // await deletePlanets.destroy();
 
-})();
+  
+
+// })();
 
 // $ node index
