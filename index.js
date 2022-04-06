@@ -1,13 +1,15 @@
 (async () => {
   const planet = require('./models/planet');
   
-  /*
-  const newPlanet = await planet.create({
-    name: "Venus",
-    position: 5,
-  });
-  */
+  
+  // -- create
+  // const newPlanet = await planet.create({
+  //   name: "Venus",
+  //   position: 5,
+  // });
+  
 
+  // -- find
   // const seePlanets = await planet.findAll();
   // const seePlanets = await planet.findByPk(1);
   // const seePlanets = await planet.findAll({
@@ -16,12 +18,15 @@
   //   },
   // });
 
+  // -- update
+  // const updatePlanets = await planet.findByPk(1);
+  //   updatePlanets.name = "Terra888";
+  //   await updatePlanets.save();
 
-  const updatePlanets = await planet.findByPk(1);
-    updatePlanets.name = "Terra888";
-    await updatePlanets.save();
-
-  console.log(updatePlanets);
+  // -- delete
+  const deletePlanets = await planet.findByPk(1);
+  console.log(deletePlanets);
+  await deletePlanets.destroy();
 
 })();
 
