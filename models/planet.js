@@ -7,3 +7,5 @@ const planet = sequelize.define('planets', {
 });
 
 module.exports = planet;
+
+// sequelize db:migrate:undo
