@@ -8,4 +8,9 @@ routes.get('/planets', PlanetController.index);
 routes.put('/planets/:id', PlanetController.put);
 routes.delete('/planets/:id', PlanetController.delete);
 
+routes.post('/planet/:planetId/satelites', SateliteController.store);
+
+// const SateliteController = require('../controller/SateliteController');
+
+
 module.exports = routes;
