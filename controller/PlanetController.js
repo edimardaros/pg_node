@@ -13,7 +13,7 @@ module.exports = {
     return res.json(planets);
   },
 
-  async, put(req,res) {
+  async put(req,res) {
     const {name, size, position} = req.body;
     await Planet.update(
         {name, size, position},
